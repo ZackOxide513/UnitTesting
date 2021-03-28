@@ -8,19 +8,19 @@ namespace TestNinja.Mocking
 {
     public interface IVideoQuery
     {
-        List<int> GetVideoIds();
+        List<Video> GetUnprocessedVideos();
     }
 
     public class VideoQuery : IVideoQuery
     {
-        public List<int> GetVideoIds()
+        public List<Video> GetUnprocessedVideos()
         {
             using (var context = new VideoContext())
             {
-                var videoIds = (from video in context.Videos
+                var videos = (from video in context.Videos
                               where !video.IsProcessed
-                              select video.Id);
-                return videoIds.ToList();
+                              select video);
+                return videos.ToList();
             }
         }
     }
