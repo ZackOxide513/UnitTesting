@@ -75,6 +75,7 @@
     <Compile Include="ReservationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StackTests.cs" />
+    <Compile Include="TestEmployeeController\EmployeeControllerTests.cs" />
     <Compile Include="TestInstallerHelper\InstallerHelperTests.cs" />
     <Compile Include="TestVideoService\VideoServiceTests.cs" />
   </ItemGroup>
